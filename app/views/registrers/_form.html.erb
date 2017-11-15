@@ -1,0 +1,42 @@
+<%= form_with(model: registrer, local: true) do |form| %>
+  <% if registrer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(registrer.errors.count, "error") %> prohibited this registrer from being saved:</h2>
+
+      <ul>
+      <% registrer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :registration %>
+    <%= form.number_field :registration, id: :registrer_registration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :registrer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.text_field :course, id: :registrer_course %>
+  </div>
+
+  <div class="field">
+    <%= form.label :module %>
+    <%= form.number_field :module, id: :registrer_module %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_registration %>
+    <%= form.date_select :date_of_registration, id: :registrer_date_of_registration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

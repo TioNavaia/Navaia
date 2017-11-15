@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registration: 1
+  name: MyString
+  course: MyString
+  module: 1
+  date_of_registration: 2017-11-14
+
+two:
+  registration: 1
+  name: MyString
+  course: MyString
+  module: 1
+  date_of_registration: 2017-11-14
